@@ -13,7 +13,7 @@ class Product(models.Model):
   price = models.PositiveBigIntegerField()
   category = models.ForeignKey(Category, on_delete=models.CASCADE)
   img = models.ImageField(blank=True, default='noImage.png')
-  detail = models.CharField(max_length=200, blank=True,  null=True)
+  detail = models.TextField(blank=True,  null=True)
 
  
   def __str__(self):
